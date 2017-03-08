@@ -1,0 +1,35 @@
+{
+  "name": "otaku!",
+  "version": "1.0.0",
+  "description": "a react app",
+  "main": "./src/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moonrailgun/Otaku.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "moonrailgun",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/moonrailgun/Otaku/issues"
+  },
+  "homepage": "https://github.com/moonrailgun/Otaku#readme",
+  "dependencies": {
+    "electron": "^1.6.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.4.0",
+    "gulp": "^3.9.1",
+    "mocha": "^3.2.0",
+    "webpack": "^2.2.1"
+  }
+}
