@@ -2,9 +2,10 @@
   "name": "otaku!",
   "version": "1.0.0",
   "description": "a react app",
-  "main": "./src/main.js",
+  "main": "./build/main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -22,13 +23,19 @@
   "dependencies": {
     "electron": "^1.6.1",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "require-dir": "^0.3.1"
   },
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-core": "^6.23.1",
     "babel-loader": "^6.4.0",
     "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.1.0",
+    "gulp-watch": "^4.3.11",
     "mocha": "^3.2.0",
     "webpack": "^2.2.1"
   }
