@@ -2,6 +2,10 @@ var src = "./src";
 var dest = "./build";
 
 module.exports = {
+  base: {
+    src: src,
+    dest: dest
+  },
   sass: {
     all: src + "/sass/**/*.scss",
     src: src + "/sass/*.scss",
