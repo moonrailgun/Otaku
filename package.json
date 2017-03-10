@@ -2,7 +2,7 @@
   "name": "otaku!",
   "version": "1.0.0",
   "description": "a react app",
-  "main": "./build/main.js",
+  "main": "./build/entry.js",
   "scripts": {
     "start": "electron .",
     "watch": "gulp watch",
@@ -24,6 +24,9 @@
   "homepage": "https://github.com/moonrailgun/Otaku#readme",
   "dependencies": {
     "electron": "^1.6.1",
+    "rc-banner-anim": "^0.5.10",
+    "rc-queue-anim": "^0.13.2",
+    "rc-tween-one": "^1.0.4",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "require-dir": "^0.3.1"
@@ -38,6 +41,8 @@
     "gulp-clean": "^0.3.2",
     "gulp-imagemin": "^3.1.1",
     "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-sync": "^0.1.4",
     "gulp-uglify": "^2.1.0",
     "gulp-util": "^3.0.8",
     "gulp-watch": "^4.3.11",

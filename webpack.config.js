@@ -5,12 +5,12 @@ module.exports = {
   cache: true,
   target: 'electron',
   devtool: 'source-map',
-  entry: path.resolve(__dirname, './src/main.js'),
+  entry: path.resolve(__dirname, './src/js/main.js'),
   output: {
     path: path.join(__dirname, 'build'),
-    filename: '[name].js',
-    chunkFilename: '[chunkhash].js',
-    sourceMapFilename: '[name].map'
+    filename: 'js/[name].js',
+    chunkFilename: 'js/[chunkhash].js',
+    sourceMapFilename: 'js/[name].map'
   },
   node: {
       __dirname: false
@@ -24,6 +24,6 @@ module.exports = {
     ]
   },
   plugins: [
-      new webpack.optimize.UglifyJsPlugin({comments: false}),
+      //new webpack.optimize.UglifyJsPlugin({comments: false}),
   ]
 }
