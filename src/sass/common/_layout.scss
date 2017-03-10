@@ -1,0 +1,40 @@
+div.full-size{
+  height: 100%;
+  width: 100%;
+}
+
+div.flex-container{
+  display: flex;
+  flex-direction: row;
+
+  &.flex-column{
+    flex-direction: column;
+  }
+}
+
+div.flex-auto{
+  flex:auto;
+}
+
+div.flex-none{
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+div.flex-fixed{
+  // -webkit-flex-grow: 0;
+  // -webkit-flex-shrink: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+div.flex-grow{
+  // -webkit-flex-grow:1;
+  flex-grow: 1;
+}
+
+div.flex-shrink{
+  flex-shrink: 1；
+}
+
+@include make-flex;

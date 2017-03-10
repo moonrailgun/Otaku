@@ -1,0 +1,5 @@
+.content{
+  padding: 0;
+  @extend .flex-grow;
+  @extend .flex-shrink;
+}

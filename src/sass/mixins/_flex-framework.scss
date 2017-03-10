@@ -1,0 +1,32 @@
+@mixin calc-flex-degree($index, $type) {
+  @if ($type == grow) and ($index >= 0) {
+    .flex-#{$type}-#{$index}{
+      flex-grow: $index
+    }
+  }
+
+  @if ($type == shrink) and ($index >= 0) {
+    .flex-#{$type}-#{$index}{
+      flex-shrink: $index
+    }
+  }
+
+  @if ($type == auto) and ($index >= 0) {
+    .flex-#{$type}-#{$index}{
+      flex-grow: $index;
+      flex-shrink: $index;
+    }
+  }
+}
+
+@mixin loop-flex-degree($columns, $type) {
+  @for $i from 0 through $columns {
+    @include calc-flex-degree($i, $type);
+  }
+}
+
+@mixin make-flex {
+  @include loop-flex-degree(24, glow);
+  @include loop-flex-degree(24, shrink);
+  @include loop-flex-degree(24, auto);
+}

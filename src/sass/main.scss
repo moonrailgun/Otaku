@@ -1,0 +1,29 @@
+// @import './bootstrap3/bootstrap';
+@import './mixins';
+@import './common/basecolor';
+@import './common/scrollbar';
+@import './common/layout';
+@import './common/banner';
+@import './sidebar/sidebar-base';
+@import './content/content-base';
+
+* {
+  outline: none;
+  cursor: default;
+  box-sizing: border-box;
+  &[disabled]:hover {
+    cursor: not-allowed;
+  }
+}
+
+html, body, #app{
+  height: 100%;
+  width: 100%;
+  -webkit-user-select: none;
+  margin: 0;
+}
+
+.row{
+  padding: 0;
+  margin: 0;
+}
