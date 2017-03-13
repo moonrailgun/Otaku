@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 
 class HotApp extends Component {
-  _onClick(index) {
+  _onClick(index, callback) {
     console.log(index);
-    console.log(this);
+    callback();
   }
 
   render() {
     var appItems = this.props.list.map((item, index) => {
       return (
-        <li key={index} onClick={this._onClick.bind(this, index)}>
+        <li
+          key={index}
+          onClick={this._onClick.bind(this, index, item.callback)}>
           <img src={item.image}/>
           <span>{item.name}</span>
         </li>

@@ -1,5 +1,5 @@
 var gulp = require('gulp');
 
 gulp.task('default', ['clean'], function(){
-  gulp.start('sass', 'images', 'copy', 'webpack');
+  gulp.start('copy', 'sass', 'images', 'webpack');
 });

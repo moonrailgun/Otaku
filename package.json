@@ -5,6 +5,7 @@
   "main": "./build/entry.js",
   "scripts": {
     "start": "electron .",
+    "build": "gulp",
     "watch": "gulp watch",
     "deploy": "gulp deploy",
     "clean": "gulp clean"
@@ -23,12 +24,14 @@
   },
   "homepage": "https://github.com/moonrailgun/Otaku#readme",
   "dependencies": {
+    "cheerio": "^0.22.0",
     "electron": "^1.6.1",
     "rc-banner-anim": "^0.5.10",
     "rc-queue-anim": "^0.13.2",
     "rc-tween-one": "^1.0.4",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "request": "^2.81.0",
     "require-dir": "^0.3.1"
   },
   "devDependencies": {

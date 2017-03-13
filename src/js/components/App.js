@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import Home from '../page/Home';
 import Local from '../page/Local';
+import Store from '../page/Store';
+import Settings from '../page/Settings';
 
 class App extends Component {
   constructor(props) {
@@ -36,6 +38,14 @@ class App extends Component {
       }else if(index === 1){
         return (
           <Local></Local>
+        )
+      }else if(index === 2){
+        return (
+          <Store></Store>
+        )
+      }else if(index === 3){
+        return (
+          <Settings></Settings>
         )
       }else{
         return (

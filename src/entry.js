@@ -1,5 +1,6 @@
 const electron = require('electron');
 const path = require('path');
+const fs = require('fs');
 const { app } = electron;
 const { BrowserWindow } = electron;
 
@@ -17,6 +18,15 @@ function createWindow() {
 
   // 打开窗口的调试工具
   win.webContents.openDevTools();
+
+  // 检测目录结构
+  fs.stat("data", function(err, stats) {
+    if(err){
+      fs.mkdir("data", (err)=>{
+        console.warn(err);
+      })
+    }
+  });
 
   // 窗口关闭的监听
   win.on('closed', () => {

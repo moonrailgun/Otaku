@@ -3,9 +3,11 @@ var path = require('path');
 
 module.exports = {
   cache: true,
-  target: 'electron',
+  target: 'electron', //目标平台默认为web
   devtool: 'source-map',
-  entry: path.resolve(__dirname, './src/js/main.js'),
+  entry: {
+    main: path.resolve(__dirname, './src/js/main.js')
+  },
   output: {
     path: path.join(__dirname, 'build'),
     filename: 'js/[name].js',
