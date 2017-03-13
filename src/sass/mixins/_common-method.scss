@@ -1,0 +1,7 @@
+@mixin nowrap{
+  white-space: nowrap;
+  word-break: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}

@@ -3,3 +3,9 @@
   @extend .flex-grow;
   @extend .flex-shrink;
 }
+
+.content-page{
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+}

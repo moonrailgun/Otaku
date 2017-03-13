@@ -1,0 +1,41 @@
+.hot-app{
+  $item-width: 80px;
+  $item-height: 100px;
+
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  li{
+    float: left;
+    width: $item-width;
+    height: $item-height;
+    margin: 6px;
+    img{
+      width: $item-width;
+      height: $item-width - 10;
+      padding: 10px;
+      padding-bottom: 0;
+    }
+    span{
+      display: inline-block;
+      @include nowrap;
+    }
+    &:hover,img:hover,span:hover{
+      cursor: pointer;
+    }
+    &:hover{
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    &:before,&:after{
+      clear: both;
+    }
+  }
+  &:before,&:after{
+    display: table;
+    content: " ";
+  }
+  &:after{
+    clear: both;
+  }
+}
