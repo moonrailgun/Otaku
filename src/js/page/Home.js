@@ -9,7 +9,7 @@ class Home extends Component {
     const applist = [
       {
         "name":"网络爬虫", "image":"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=833154782,4269906888&fm=23&gp=0.jpg",
-        callback: ()=>{
+        callback: () => {
           const spider = new Spider;
           const url = "http://www.ss.pku.edu.cn/index.php/newscenter/news/2391";
           spider.fetchPage(url);

@@ -23,7 +23,9 @@ function createWindow() {
   fs.stat("data", function(err, stats) {
     if(err){
       fs.mkdir("data", (err)=>{
-        console.warn(err);
+        if(err){
+          console.warn(err);
+        }
       })
     }
   });
