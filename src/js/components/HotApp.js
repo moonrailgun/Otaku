@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 class HotApp extends Component {
   _onClick(index, callback) {
     console.log(index);
-    callback();
+    if(callback){
+      callback();
+    }
   }
 
   render() {

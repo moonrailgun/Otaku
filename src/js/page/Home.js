@@ -16,7 +16,13 @@ class Home extends Component {
         }
       },
       {
-        "name":"测试入口", "image":"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=833154782,4269906888&fm=23&gp=0.jpg"
+        "name":"测试入口", "image":"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=833154782,4269906888&fm=23&gp=0.jpg",
+      },
+      {
+        "name":"弹幕播放器", "image":"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=833154782,4269906888&fm=23&gp=0.jpg",
+        callback: () => {
+          
+        }
       }
     ]
     return (
