@@ -6,7 +6,8 @@ module.exports = {
   target: 'electron', //目标平台默认为web
   devtool: 'source-map',
   entry: {
-    main: path.resolve(__dirname, './src/js/main.js')
+    main: path.resolve(__dirname, './src/js/main.js'),
+    reader: path.resolve(__dirname, './src/js/reader.js')
   },
   output: {
     path: path.join(__dirname, 'build'),
