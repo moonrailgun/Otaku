@@ -6,10 +6,10 @@ import Settings from '../page/Settings';
 
 class App extends Component {
   constructor(props) {
-      super(props);
-      this.state = {
-          currentPageIndex: 0
-      };
+    super(props);
+    this.state = {
+      currentPageIndex: 0
+    };
   }
 
   _switchContentPage(index) {
