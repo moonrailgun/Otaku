@@ -64,20 +64,23 @@ global.terminate = function () {
   app.quit();
 };
 
-let win;
+let mainWindow;
+let readerWindow;
+let shouldQuit = false;
+
 function createWindow() {
   // 创建窗口并加载页面
-  win = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: 1000,
     height: 600,
     // frame: false,
     transparent: true,
     icon: path.join(__dirname, './assets/images/icon/128.png'),
   });
-  win.loadURL(`file://${__dirname}/index.html`);
+  mainWindow.loadURL(`file://${__dirname}/index.html`);
 
   // 打开窗口的调试工具
-  win.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
 
   // 检测目录结构
   fs.stat("data", function(err, stats) {
@@ -91,14 +94,41 @@ function createWindow() {
   });
 
   // 窗口关闭的监听
-  win.on('closed', () => {
-    win = null;
+  mainWindow.on('close', (e) => {
+      if (!shouldQuit) {
+          e.preventDefault();
+          mainWindow.hide();
+      }
+  });
+  mainWindow.on('closed', () => {
+    mainWindow = null;
   });
 
   //基于darwin平台的菜单模板
   if (process.platform == "darwin") {
     Menu.setApplicationMenu(menu);
   }
+
+  readerWindow = new BrowserWindow({
+    width: 800,
+    height: 600,
+    // frame: false,
+    transparent: true,
+    icon: path.join(__dirname, './assets/images/icon/128.png'),
+  });
+  readerWindow.loadURL(`file://${__dirname}/reader.html`);
+  readerWindow.hide();
+  readerWindow.on('close', (e) => {
+      if (!shouldQuit) {
+          e.preventDefault();
+          readerWindow.hide();
+      }
+  });
+  readerWindow.on('closed', () => {
+    readerWindow = null;
+  });
+
+  global.readerWindow = readerWindow;
 }
 
 app.on('ready', createWindow);
@@ -109,7 +139,7 @@ app.on('window-all-closed', () => {
 });
 
 app.on('activate', () => {
-  if (win === null) {
+  if (mainWindow === null) {
     createWindow();
   }
 });

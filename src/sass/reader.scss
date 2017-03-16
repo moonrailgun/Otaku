@@ -1,0 +1,24 @@
+@import './mixins';
+
+@include make-flex;
+
+* {
+  outline: none;
+  cursor: default;
+  box-sizing: border-box;
+  &[disabled]:hover {
+    cursor: not-allowed;
+  }
+}
+
+html, body, #reader{
+  height: 100%;
+  width: 100%;
+  -webkit-user-select: none;
+  margin: 0;
+}
+
+.row{
+  padding: 0;
+  margin: 0;
+}

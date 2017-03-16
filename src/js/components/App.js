@@ -3,6 +3,7 @@ import Home from '../page/Home';
 import Local from '../page/Local';
 import Store from '../page/Store';
 import Settings from '../page/Settings';
+import ui from '../backend/ui.interface';
 
 class App extends Component {
   constructor(props) {

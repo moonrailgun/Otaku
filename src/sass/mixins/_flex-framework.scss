@@ -26,7 +26,7 @@
 }
 
 @mixin make-flex {
-  @include loop-flex-degree(24, glow);
-  @include loop-flex-degree(24, shrink);
-  @include loop-flex-degree(24, auto);
+  @include loop-flex-degree(12, glow);
+  @include loop-flex-degree(12, shrink);
+  @include loop-flex-degree(12, auto);
 }
