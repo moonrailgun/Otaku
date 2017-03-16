@@ -3,15 +3,22 @@ import React, { Component, PropTypes } from 'react';
 class ReaderHeader extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      isShow: this.props.isShow || true,
+    }
   }
 
   render() {
+    console.log(this.state);
     return (
       <div className="reader-header">
-        {this.props.title}
+        {this.props.readerTitle}
       </div>
     )
   }
+}
+ReaderHeader.PropTypes = {
+  readerTitle: PropTypes.string,
 }
 
 class ReaderContent extends Component {
@@ -21,7 +28,9 @@ class ReaderContent extends Component {
 
   render() {
     return (
-      <div className="reader-content" dangerouslySetInnerHTML={{__html: this.props.content}}>
+      <div className="reader-content flex-container flex-column">
+        <div className="content" dangerouslySetInnerHTML={{__html: this.props.content}}></div>
+        {this.props.children}
       </div>
     )
   }
@@ -72,13 +81,14 @@ export default class Reader extends Component {
   }
   render() {
     return (
-      <div className="full-size flex-container">
-        <ReaderHeader title="测试标题" />
-        <ReaderContent
-          content={this._getReaderContent()}/>
-        <ReaderFooter
-          onPrevPage={this._onPrevPage.bind(this)}
-          onNextPage={this._onNextPage.bind(this)}/>
+      <div className="full-size flex-container flex-column">
+        <ReaderHeader readerTitle="测试标题" />
+        <ReaderContent content={this._getReaderContent()}>
+          <ReaderFooter
+            onPrevPage={this._onPrevPage.bind(this)}
+            onNextPage={this._onNextPage.bind(this)}/>
+        </ReaderContent>
+
       </div>
     )
   }
