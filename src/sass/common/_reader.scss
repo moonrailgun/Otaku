@@ -1,0 +1,30 @@
+@import "./basecolor";
+
+.reader-header{
+  text-align: center;
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.reader-content{
+  padding: 10px 16px;
+}
+
+.reader-pagination{
+  text-align: center;
+  padding: 20px 0;
+  .reader-btn{
+    display: inline;
+    margin: 0 10px;
+    border: 1px solid $alpha-dark-low;
+    border-radius: 2px;
+    padding: 6px 10px;
+
+    &:hover{
+      background-color: $alpha-dark-low;
+    }
+    &:hover{
+      background-color: $alpha-dark-middle;
+    }
+  }
+}
