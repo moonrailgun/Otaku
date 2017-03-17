@@ -4,9 +4,9 @@ import { remote } from 'electron';
 import event from './event';
 import { APP_NAME, EVENT } from '../constants';
 
-const Menu = remote.Menu;
-const Tray = remote.Tray;
-const readerWindow = remote.getGlobal('readerWindow');
+// const Menu = remote.Menu;
+// const Tray = remote.Tray;
+// const readerWindow = remote.getGlobal('readerWindow');
 
 const focusWindow = (browserWindow) => {
   if(!browserWindow.isVisible()) {

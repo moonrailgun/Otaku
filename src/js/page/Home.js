@@ -7,8 +7,8 @@ import event from '../backend/event';
 import { EVENT } from '../constants';
 
 class Home extends Component {
-  render() {
-    const applist = [
+  getAppList() {
+    return [
       {
         "name":"网络爬虫", "image":"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=833154782,4269906888&fm=23&gp=0.jpg",
         callback: () => {
@@ -30,10 +30,13 @@ class Home extends Component {
         }
       }
     ]
+  }
+
+  render() {
     return (
       <div id="home" className="content-page">
         <Banner></Banner>
-        <HotApp list={applist}></HotApp>
+        <HotApp list={this.getAppList()}></HotApp>
       </div>
     )
   }
